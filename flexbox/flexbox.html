@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body, html{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .container{
+            width: 600px;
+            margin: 50px auto;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+
+        header{
+            background-color: blueviolet;
+            padding: 40px;
+        }
+
+        .content{
+            display: flex;
+        }
+
+        .sidebar{
+            flex: 1;
+        }
+
+        .sidebar aside{
+            background-color: blue;
+            padding: 60px 0;
+        }
+
+        .sidebar nav{
+            background-color: red;
+            padding: 100px 0;
+        }
+
+
+        main{
+            background-color: rgb(255, 197, 37);
+            /* padding: 171.5px */
+            /* width: 60%; */
+            box-sizing: border-box;
+            display: flex;
+            flex: 1.5;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        footer{
+            background-color: #666;
+            padding: 20px 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <div class="content">
+            <div class="sidebar">
+                <aside>Aside</aside>
+                <nav>Nav</nav>
+            </div>
+            <main>Main</main>
+        </div>
+
+        <footer>Footer</footer>
+    </div>
+    
+</body>
+</html>
