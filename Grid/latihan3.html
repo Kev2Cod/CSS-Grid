@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid | Explicit & Implicit Grid CSS</title>
+    <title>CSS Grid | Fr / Fraction</title>
 
     <style>
         html, body{
@@ -17,11 +17,7 @@
             width: 60%;
             margin: 50px auto;
             display: grid;
-            grid-template-columns: 50px 25% ;
-            grid-template-rows: 100px 60px;
-            grid-auto-flow: column ;
-            grid-auto-columns: 30px ;
-            /* grid-auto-rows: 20px; */
+            grid-template-columns: 1fr 2fr 50px;
         }
 
         .item{
