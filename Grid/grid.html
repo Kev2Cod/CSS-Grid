@@ -1,87 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS GRID</title>
+    <title>CSS Grid | Latihan 2</title>
+
     <style>
-        body,
-        html {
+        html, body{
             margin: 0px;
             padding: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            text-align: center;
-            color: white;
-            text-transform: uppercase;
+            background-color: white;
         }
 
-        .container {
-            width: 600px;
+        .container{
+            width: 60%;
             margin: 50px auto;
-            border: 2px solid black;
-            box-sizing: border-box;
-            padding: 5px;
             display: grid;
-            grid-template-areas: "header header"
-                "aside main"
-                "nav main"
-                "footer footer";
-            grid-template-columns: 1fr 1.5fr;
-            grid-template-rows: 1fr 1.2fr 1fr;
+            grid-template-columns: 100px 25% 200px;
         }
 
-        header {
-            grid-area: header ;
-            background-color: blueviolet;
-            padding: 30px;
+        .item{
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: aqua;
+        }
+        
+        .item:nth-child(even){
+            background-color: rgb(233, 115, 115);
         }
 
-        aside {
-            grid-area: aside;
-            background-color: blue;
-            padding: 60px 0;
-        }
-
-        nav {
-            grid-area: nav;
-            background-color: red;
-            padding: 100px 0;
-        }
-
-
-        main {
-            grid-area: main;
-            background-color: rgb(255, 197, 37);
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        footer {
-            grid-area: footer;
-            background-color: #666;
-            padding: 20px 0;    
-        }
     </style>
 </head>
-
 <body>
+
     <div class="container">
-        <header>Header</header>
-        <aside>Aside</aside>
-        <nav>Nav</nav>
-        <main>Main</main>
-        <footer>Footer</footer>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
     </div>
-
+    
 </body>
-
 </html>
