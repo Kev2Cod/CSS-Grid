@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Grid Template Area</title>
+
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: white;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            display: grid;
+            /* grid-template-rows: [baris1-mulai] 50px
+            [baris1-akhir baris2-awal] 100px [baris2-akhir];
+            grid-template-columns: 1fr 2fr 3fr;
+            grid-template-areas:
+                'header header header'
+                'footer footer footer'; */
+            grid-template: [baris1-awal] 'header header header'50px [baris1-akhir baris2-awal] 'footer footer footer' 100px [baris2-akhir] / 1fr 2fr 3fr;
+        }
+
+        .item {
+            /* width: 100%;
+            padding: 100px; */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: lightseagreen;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: bisque;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: orange;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #666;
+
+        }
+
+                
+        .item:nth-child(even){
+            background-color: rgb(233, 115, 115);
+        }
+
+        /* @media screen and (max-width: 576px) {
+            .container {
+                grid-template-areas:
+                    'header header header'
+                    'sidebar sidebar sidebar'
+                    'content content content'
+                    'footer footer footer';
+            }
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <!-- <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div> -->
+    </div>
+
+</body>
+
+</html>
